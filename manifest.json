@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Hello Extensions of the world!",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "action": {
+        "default_popup": "hello.html",
+        "default_icon": "hello_extensions.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "commands": {
+        "show_hello_world": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Y"
+            },
+            "description": "Show Hello World alert"
+        }
+    }
+}
