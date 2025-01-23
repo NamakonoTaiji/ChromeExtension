@@ -12,7 +12,11 @@
     },
     "permissions": [
         "scripting",
-        "activeTab"
+        "activeTab",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://copilot.microsoft.com/*"
     ],
     "commands": {
         "show_hello_world": {
