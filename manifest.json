@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions of the world!",
-    "description": "Base Level Extension",
+    "name": "CopilotExtension",
+    "description": "This extension will help you to use copilot",
     "version": "1.0",
     "action": {
         "default_popup": "hello.html",
@@ -19,7 +19,7 @@
         "https://copilot.microsoft.com/*"
     ],
     "commands": {
-        "show_hello_world": {
+        "copilot_selectedText_send": {
             "suggested_key": {
                 "default": "Ctrl+Shift+Y"
             },
