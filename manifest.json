@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Selection Transferer",
+  "version": "1.0",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "tabs",
+    "notifications",
+    "commands"
+  ],
+  "host_permissions": [
+    "https://copilot.microsoft.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://copilot.microsoft.com/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "contentScript.js"
+      ],
+      "matches": [
+        "https://copilot.microsoft.com/*"
+      ]
+    }
+  ],
+  "commands": {
+    "transfer-selected-text": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "選択したテキストをCopilotタブに転送します"
+    }
+  }
+}
